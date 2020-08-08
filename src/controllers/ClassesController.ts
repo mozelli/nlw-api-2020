@@ -61,7 +61,8 @@ export default class ClassesController {
             transaction.rollback();
     
             return response.status(400).json({
-                error: "Unexpected error while creating new class"
+                error: "Unexpected error while creating new class",
+                message: error
             })
         }
     }

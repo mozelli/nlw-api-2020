@@ -21,7 +21,8 @@ export default class ConnectionsController {
             return response.status(201).send();
         } catch (error) {
             return response.status(400).json({
-                error: "Unexpected error while creating new connection."
+                error: "Unexpected error while creating new connection.",
+                message: error
             });
         }
     }
